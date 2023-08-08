@@ -17,8 +17,9 @@
         <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
         <!-- font awesome icons -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha512-3M00D/rn8n+2ZVXBO9Hib0GKNpkm8MSUU/e2VNthDyBYxKWG+BftNYYcuEjXlyrSO637tidzMBXfE7sQm0INUg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>{% block title %}{% endblock %}</title>
-        {% block script %}{% endblock %}
     </head>
     <body>  
         <!-- Nav -->
@@ -45,7 +46,7 @@
                                 <a class="nav-link active " aria-current="page" href="{% url 'index' %}">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contacto</a>
+                                <a class="nav-link" href="{% url 'usuarios' %}">Usuarios</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button"
@@ -87,12 +88,12 @@
         </header>
 
         <!-- Cuerpo -->
-        <main>
+        <main >
             {% block content %}{% endblock %}
         </main>
 
 
-        <footer id="footer-landing" class="bg-dark text-center text-white fixed-bottom">
+        <footer id="footer-landing" class="bg-dark text-center text-white  ">
             
             <div class="container p-4 pb-0">
                 <!-- Section: Links -->
@@ -100,7 +101,7 @@
                     <!--Grid row-->
                     <div class="row">
                     <!-- Grid column -->
-                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <div class="col-md-4 col-lg-4 col-xl-5 mx-auto mt-3">
                         <h6 class="text-uppercase mb-4 font-weight-bold">
                         App Django
                         </h6>
@@ -112,7 +113,7 @@
                     <hr class="w-100 clearfix d-md-none" />
 
                     <!-- Grid column -->
-                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <div class="col-md-3 col-lg-3 col-xl-2 mx-auto mt-3">
                         <h6 class="text-uppercase mb-4 font-weight-bold">Listado Links</h6>
                         <p>
                         <a class="text-white"  href="#">Link 1</a>
@@ -127,16 +128,13 @@
       
                     </div>
                     <!-- Grid column -->
-
                     <hr class="w-100 clearfix d-md-none" />
-
-                    
 
                     <!-- Grid column -->
                     <hr class="w-100 clearfix d-md-none" />
 
                     <!-- Grid column -->
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <div class="col-md-5 col-lg-5 col-xl-5 mx-auto mt-3">
                         <h6 class="text-uppercase mb-4 font-weight-bold">Contáctanos</h6>
                     
                         <p><i class="fas fa-home mr-3"></i> Calle Bonita, nº 1234, Comuna, 0 Región, Chile</a>
@@ -216,6 +214,8 @@
                 </section>
             </div>
         </footer>
+
+        <script src="{% static 'js/logica.js' %}"></script>
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         
